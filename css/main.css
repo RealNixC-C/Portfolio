@@ -483,6 +483,7 @@ footer .copyright {
   /* 모바일에서는 화면의 80%만 차지하도록 */
   .inner {
     width: 80%;
+    margin: 0 auto;
   }
   .title {
     font-size: 30px;
@@ -521,6 +522,9 @@ footer .copyright {
   }
   header nav ul li a:hover {
     letter-spacing: 5px;
+  }
+  .visual > .inner {
+    font-size: 39px;
   }
   .about {
     padding: 100px 0;
