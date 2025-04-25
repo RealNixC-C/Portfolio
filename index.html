@@ -3,382 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>박요한 포트폴리오</title>
+  <title>YoHan's portfoilio</title>
 
-
-  <!-- 파비콘(favicon.ico)은 프로젝트 폴더의 최상위 경로에 포함시키면 자동 적용 
-    최상위 경로에 없거나, ico가 아닌 별도 파일을 가진 경우에는 <link>로 적용 -->
-  <link rel="icon" href="favicon.ico">
-  <!-- (참고) 파비콘 만들기: https://iconifier.net -->
-
-  <!-- reset.css -->
+  <link rel="icon" href="favicon1.ico">
+  <!-- reset -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
-  
-  <!-- 구글 웹폰트 연결 -->
-  <!-- 경량화된 오픈 라이선스 폰트, 한글 지원하는지 꼭 확인 및 필요한 굵기 선택후 연결  -->
-  <!-- 한글: Noto Sans Korean, 영문: Open Sans -->
+  <!-- animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Material Symbol -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- Scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
   
-  <!-- 구글 머터리얼 아이콘 연결 -->
-  <!-- 구글에서 제공하는 아이콘, 글자처럼 취급 가능한 장점 -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  
-  <!-- main.css -->
   <link rel="stylesheet" href="css/main.css">
-  
-  <!-- ScrollMagic -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
-  <!-- main -->
-  <script defer src="js/main.js"></script>
-</head>
-<body>
-  <!-- 폰트 테스트 -->
-  <!-- <span>헬로 월드!</span>
-  <span class="font-en">Hello world!</span> -->
 
-  <div style="overflow-x: hidden;">
-    <!-- HEADER -->
-    <header id="header">
-      <div class="inner"> <!-- 가운데 정렬용-->
-        <!-- 로고 -->
-        <a href="index.html" class="logo">
-          <!-- 본인의 로고를 이미지로 제작 시 기존 파일과 교체,
-          만약 텍스트로 넣을거면 img 요소 제거하고 텍스트 입력 -->
-          <img src="images/logo.png" alt="로고">
-        </a>
-        <!-- 메뉴 -->
-        <nav class="font-en">
-          <ul>
-            <li>
-              <a href="#about">ABOUT</a>
+  <script defer src="js/main.js"></script>
+
+</head>
+
+<body>
+<div style="overflow-x: hidden;">
+  <div class="root">
+    <header class="header">
+      <nav class="inner">
+        <div class="logo">
+          <a href="#">
+            <img src="image/logo.png" alt="로고">
+          </a>
+        </div>
+        <div class="header-menu">
+          <ul class="menu-list">
+            <li class="menu-list-intro">
+              <a href="#intro" id="id-intro">Intro</a>
             </li>
-            <li>
-              <a href="#skill">SKILL</a>
+            <li class="menu-list-about">
+              <a href="#about" id="id-about">About</a>
             </li>
-            <li>
-              <a href="#project">PROJECT</a>
+            <li class="menu-list-skill">
+              <a href="#skill" id="id-skill">Skill</a>
             </li>
-            <li>
-              <a href="#contact">CONTACT</a>
+            <li class="menu-list-project">
+              <a href="#project" id="id-project">Project</a>
+            </li>
+            <li class="menu-list-contact">
+              <a href="#contact" id="id-contact">Contact</a>
             </li>
           </ul>
-        </nav>
-  
-        <!-- 햄버거 버튼 -->
+        </div>
         <a href="javascript:void(0)" class="btn-hamburger">
           <span class="material-symbols-outlined">menu</span>
         </a>
-      </div>
+      </nav>
     </header>
-  
-    <!-- VISUAL -->
-    <section class="visual">
+
+    <section class="intro" id="intro">
       <div class="inner">
-        <h1 class=".font-en">
-          <span class="animate-flash" style="animation-delay: 0.04s;">반</span>
-          <span class="animate-flash" style="animation-delay: 0.26s;">짝</span>
-          <span class="animate-flash" style="animation-delay: 0.08s;">반</span>
-          <span class="animate-flash" style="animation-delay: 0.02s;">짝</span>
-          &nbsp;
-          <span class="animate-flash purple" style="animation-delay: 0.26s;">빛</span>
-          <span class="animate-flash purple" style="animation-delay: 0.06s;">나</span>
-          <span class="animate-flash purple" style="animation-delay: 0.14s;">는</span>
-          <br>
-          <span class="animate-flash" style="animation-delay: 0.06s;">F</span>
-          <span class="animate-flash" style="animation-delay: 0.28s;">u</span>
-          <span class="animate-flash" style="animation-delay: 0.12s;">l</span>
-          <span class="animate-flash" style="animation-delay: 0.15s;">l</span>
-          &nbsp;
-          <span class="animate-flash" style="animation-delay: 0.02s;">S</span>
-          <span class="animate-flash" style="animation-delay: 0.22s;">t</span>
-          <span class="animate-flash" style="animation-delay: 0.17s;">a</span>
-          <span class="animate-flash" style="animation-delay: 0.19s;">c</span>
-          <span class="animate-flash" style="animation-delay: 0.20s;">k</span>
-          &nbsp;
-          <span class="animate-flash blue" style="animation-delay: 0.11s;">D</span>
-          <span class="animate-flash blue" style="animation-delay: 0.18s;">e</span>
-          <span class="animate-flash blue" style="animation-delay: 0.05s;">v</span>
-          <span class="animate-flash blue" style="animation-delay: 0.06s;">e</span>
-          <span class="animate-flash blue" style="animation-delay: 0.09s;">l</span>
-          <span class="animate-flash blue" style="animation-delay: 0.24s;">o</span>
-          <span class="animate-flash blue" style="animation-delay: 0.28s;">p</span>
-          <span class="animate-flash blue" style="animation-delay: 0.14s;">e</span>
-          <span class="animate-flash blue" style="animation-delay: 0.25s;">r</span>
-          <br>
-          <span class="animate-flash blue" style="animation-delay: 0.10s;">박</span>
-          <span class="animate-flash blue" style="animation-delay: 0.16s;">요</span>
-          <span class="animate-flash blue" style="animation-delay: 0.24s;">한</span>
-          <span class="animate-flash" style="animation-delay: 0.12s;">입</span>
-          <span class="animate-flash" style="animation-delay: 0.15s;">니</span>
-          <span class="animate-flash" style="animation-delay: 0.05s;">다</span>
-          <span class="animate-flash" style="animation-delay: 0.13s;">.</span>
+        <h1 class="animate__animated animate__fadeInRight introduce">
+        개발자 포트폴리오
         </h1>
+        <hr class="divider">
+        <h2 class="animate__animated animate__bounce">
+          Full Stack Developer를 목표하는
+        </h2>
+        <h2 class="animate__animated animate__bounce">
+          신입 개발자입니다
+        </h2>
       </div>
     </section>
-  
-    <!-- About -->
-    <section id="about" class="about">
+
+    <section class="about scroll-spy" id="about">
+      <h1 class="title">ABOUT</h1>
       <div class="inner">
-        <h2 class="title font-en">ABOUT</h2>
-        <div class="about__wrapper">
-          <div class="about__img">
-            <!-- 본인 프로필 이미지 넣기 -->
-            <img src="images/my.png" alt="프로필 사진">
-          </div>
-          <div class="about__text">
-            <!-- 본인 슬로건, 이름(생년월일), 학력 또는 교육 사항 등 작성 -->
-            <strong class="slogan font-en">No pain, No gain</strong>
-            <h3 class="font-en">Park Yo Han (1993.03.07)</h3>
-            <div>
-              <h4 class="font-en">EDUCATION</h4>
-              <ul>
-                <li>15.03 ~ 12.04 00학교 00과 졸업</li>
-                <li>25.04 ~ 25.10 클라우드(AWS)활용 자바/스프링 개발 부트캠프 수료</li>
-              </ul>
+        <div class="flipcard">
+          <div class="card_inner">
+            <div class="card_front first">
+              <img src="image/0.Goodee.png" alt="Goodee">
+              <img src="image/profile.jpg" alt="프로필사진">
+              <h2>Park Yo Han</h2>
+            </div>
+            <div class="card_back">
+              <h4>
+                ISFJ
+              </h4>
+              <h4>
+                93.03.07
+              </h4>
+              <h4>
+                서울 금천구 거주
+              </h4>
             </div>
           </div>
         </div>
-  
-        <!-- 연락처 버튼 -->
-        <div class="about__btn font-en">
-          <a href="#contact">
-            <img src="images/icon/icon_contact.png" alt="연락처">CONTACT
-          </a>
+        <div class="flipcard second">
+          <div class="card_inner">
+            <div class="card_front">
+              <h2>
+                안녕하세요 백엔드 개발자 박요한입니다.
+                <br>
+                <br>
+                현재 IT 교육기관에서 백엔드 개발자가 되기 위한 전문 커리큘럼을 수강 중이며, 이론과 실습을 병행하며 탄탄한 기초를 다지고 있습니다.
+              </h2>
+            </div>
+            <div class="card_back">
+              현재 학원에서는 Java, Spring Framework, Git 등 백엔드 개발에 필수적인 기술들을 배우고 있습니다.
+            </div>
+          </div>
         </div>
       </div>
-      
     </section>
-  
-    <!-- SKILL -->
-    <section id="skill" class="skill scroll-spy">
+
+    <section class="skill scroll-spy" id="skill">
       <div class="inner">
-        <h2 class="title">SKILL</h2>
-        <ul class="skill__list">
-          <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
-          <li>
-            <div class="font-en">
-              <p>Java</p>
-            </div>
-            <h3 class="font-en">Java<br>Programimg</h3>
-            <ul>
-              <li>객체지향</li>
-              <li>파일 입출력</li>
-              <li>JDBC</li>
-            </ul>
-          </li>
-          <li>
-            <div class="font-en">
-              <p>Html</p>
-            </div>
-            <h3 class="font-en">HTML5</h3>
-            <ul>
-              <li>웹페이지 구조 설계</li>
-              <li>시맨틱 태그</li>
-            </ul>
-          </li>
-          <li>
-            <div class="font-en">
-              <p>Css</p>
-            </div>
-            <h3 class="font-en">CSS3</h3>
-            <ul>
-              <li>웹페이지 레이아웃 설계</li>
-              <li>웹페이지 디자인</li>
-              <li>반응형 제작</li>
-            </ul>
-          </li>
-          <li>
-            <div class="font-en">
-              <p>Js</p>
-            </div>
-            <h3 class="font-en">JavaScript</h3>
-            <ul>
-              <li>DOM 조작, 제어</li>
-              <li>이벤트 처리</li>
-              <li>비동기 통신</li>
-            </ul>
-          </li>
-          <li>
-            <div class="font-en">
-              <p>React</p>
-            </div>
-            <h3 class="font-en">React JS</h3>
-            <ul>
-              <li>SPA 개발</li>
-              <li>전역 상태 관리</li>
-              <li>클라이언트 라우팅</li>
-              <li>CSR 방식 앱개발</li>
-            </ul>
-          </li>
-        </ul>
+        <h1 class="title">Learning</h1>
+        <h2>Skills</h2>
+        <div class="skill__wrapper">
+          <div class="skill__img">
+            <img src="image/1.css.png" alt="css">
+            <img src="image/2.html.png" alt="html">
+            <img src="image/3.java_script.png" alt="java script">
+          </div>
+          <div class="skill__img">
+            <img src="image/4.java.png" alt="java">
+            <img src="image/5.jsp.png" alt="jsp">
+            <img src="image/6.nodejs.png" alt="nodejs">
+          </div>
+          <div class="skill__img">
+            <img src="image/7.sql.png" alt="sql">
+            <img src="image/8.git.png" alt="git">
+            <img src="image/9.github.png" alt="github">
+          </div>
+        </div>
       </div>
-    </section>
-  
-    <!-- PROJECT -->
-    <section id="project" class="project font-en">
+    </section> 
+
+    <section class="project scroll-spy" id="project">
       <div class="inner">
-        <h2 class="title">PROJECT</h2>
-        <div class="port">
-          <div class="port__img">
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="images/work_1.jpg" alt="산출물">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/work_2.jpg" alt="산출물2">
-                </div>
+        <h1 class="title">PROJECT</h1>
+        <div class="wrapper">
+          <div class="pj-list">
+            <ul>
+              <li>
+                <img src="image/project_img/5.photo.png" alt="이미지1">
+              </li>
+              <li>
+                <h2>프로젝트 Project</h2>
+              </li>
+              <li>
+                <h4>간단한설명 explanation</h4>
+              </li>
+              <li>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, excepturi reprehenderit unde</span>
+              </li>
+              <div class="btn-group">
+                <button type="button" class="btn">
+                  <a href="#">상세설명</a>
+                </button>
+                <button type="button" class="btn">
+                  <a href="#">바로가기</a>
+                </button>
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-          <div class="port__text">
-            <h3>프로젝트명</h3>
-            <ul>
-              <li><span>주요 기능 : </span>주요 기능 설명</li>
-              <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
-              <li><span>GitHub : </span>깃허브 주소</li>
-              <li><span>URL : </span>배포 주소</li>
             </ul>
-            <div class="btn-group">
-              <a href="javascript:void(0)" class="btn btn-modal">README</a>
-              <a href="javascript:void(0)" class="btn btn-modal-image btn--blue" data-image-src="images/work_1.jpg">이미지</a>
-            </div>
           </div>
-        </div>
-        <div class="port">
-          <div class="port__img">
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="images/work_3.jpg" alt="산출물">
-                </div>
-                <div class="swiper-slide">
-                  <img src="images/work_4.jpg" alt="산출물2">
-                </div>
+          <div class="pj-list">
+            <ul>
+              <li>
+                <img src="image/project_img/6.photo.png" alt="이미지1">
+              </li>
+              <li>
+                <h2>프로젝트 Project2</h2>
+              </li>
+              <li>
+                <h4>간단한설명 explanation</h4>
+              </li>
+              <li>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, excepturi reprehenderit unde</span>
+              </li>
+              <div class="btn-group">
+                <button type="button" class="btn">
+                  <a href="#">상세설명</a>
+                </button>
+                <button type="button" class="btn">
+                  <a href="#">바로가기</a>
+                </button>
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-          </div>
-          <div class="port__text">
-            <h3>프로젝트명</h3>
-            <ul>
-              <li><span>주요 기능 : </span>주요 기능 설명</li>
-              <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
-              <li><span>GitHub : </span>깃허브 주소</li>
-              <li><span>URL : </span>배포 주소</li>
             </ul>
-            <div class="btn-group">
-              <a href="javascript:void(0)" class="btn btn-modal">README</a>
-              <a href="javascript:void(0)" class="btn btn-modal-image btn--blue" data-image-src="images/work_3.jpg">이미지</a>
-            </div>
           </div>
+          <div class="pj-list">
+            <ul>
+              <li>
+                <img src="image/project_img/3.website.png" alt="이미지1">
+              </li>
+              <li>
+                <h2>프로젝트 Project3</h2>
+              </li>
+              <li>
+                <h4>간단한설명 explanation</h4>
+              </li>
+              <li>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, excepturi reprehenderit unde</span>
+              </li>
+              <div class="btn-group">
+                <button type="button" class="btn">
+                  <a href="#">상세설명</a>
+                </button>
+                <button type="button" class="btn">
+                  <a href="#">바로가기</a>
+                </button>
+              </div>
+            </ul>
+          </div>
+          <div class="pj-list">
+            <ul>
+              <li>
+                <img src="image/project_img/2.overwatch.png" alt="이미지1">
+              </li>
+              <li>
+                <h2>프로젝트 Project3</h2>
+              </li>
+              <li>
+                <h4>간단한설명 explanation</h4>
+              </li>
+              <li>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, excepturi reprehenderit unde</span>
+              </li>
+              <div class="btn-group">
+                <button type="button" class="btn">
+                  <a href="#">상세설명</a>
+                </button>
+                <button type="button" class="btn">
+                  <a href="#">바로가기</a>
+                </button>
+              </div>
+            </ul>
+          </div>
+          
         </div>
       </div>
-      
     </section>
-  
-    <!-- CONTACT -->
-    <section id="contact" class="contact font-en scroll-spy">
+
+    <section class="contact scroll-spy" id="contact">
       <div class="inner">
-        <h2 class="title">CONTACT</h2>
-        <div class="contact__info">
+        <h1 class="title">CONTACT</h1>
+        <div class="contact-info">
           <ul>
             <li>
-              <a href="https://github.com/geoblo" target="_blank">github.com/RealNixC-C</a>
-            </li>
-            <li>010-1234-5678</li>
-            <li>john76222@naver.com</li>
-          </ul>
-        </div>
-        <div class="contact__sns">
-          <ul>
-            <li>
-              <a href="#인스타그램주소" target="_blank">
-                <img src="images/icon/icon_insta.png" alt="인스타그램">
-              </a>
+              010-4134-0105 <span class="material-symbols-outlined">phone_android</span>
             </li>
             <li>
-              <a href="#유튜브주소" target="_blank">
-                <img src="images/icon/icon_youtube.png" alt="유튜브">
+              john7622@naver.com <span class="material-symbols-outlined">mail</span>
+            </li>
+            <li>
+              <a href="https://github.com/RealNixC-C" target="_blank" title="github">
+                https://github.com/RealNixC-C 
+                <img src="image/10.github_smallsize.png" alt="">
               </a>
             </li>
           </ul>
         </div>
       </div>
     </section>
-  
-    <!-- FOOTER -->
-    <footer>
+
+    <footer class="footer">
       <div class="inner">
-        <p class="copyright">
-          &copy; <span class="this-year"></span>
-          <span class="font-en">Park Yo Han. All Rights Reserved.</span>
-        </p>
+        <span>
+          &copy; Copyright <span class="this-year"></span>
+          NixC-C. All Rights Reserved.
+        </span>
       </div>
     </footer>
   </div>
-
-  <!-- MODAL -->
-  <!-- 모달 배경 -->
-  <div id="modal">
-    <!-- 모달 내용 -->
-    <div class="modal-content">
-      <div class="modal-header">
-        README
-        <span class="material-symbols-outlined btn-close">close</span>
-      </div>
-      <div class="modal-body">
-        <p>여기에 모달 내용이 들어갑니다.</p>
-      </div>
+</div>
+  <div class="to-top">
+    <div class="inner">
+      <a href="#">
+        <span class="material-symbols-outlined">stat_2</span>
+      </a>
     </div>
   </div>
-
-  <!-- IMAGE MODAL -->
-  <!-- 모달 배경 -->
+  
   <div id="imageModal">
-    <!-- 모달 내용 -->
     <div class="modal-content">
       <div class="modal-header">
         이미지
         <span class="material-symbols-outlined btn-close">close</span>
       </div>
       <div class="modal-body">
-        <!-- 방법1: 1픽셀 투명한 GIF -->
         <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="이미지">
-        <!-- 방법2: 스타일로 display: none + src는 나중에 지정 -->
-        <!-- 방법3: 샘플 로딩 이지미 -->
       </div>
     </div>
-  </div>
-
-  <!-- SCROLL TO TOP -->
-  <div id="to-top">
-    <a href="#">
-      <span class="material-symbols-outlined btn-close">arrow_upward</span>
-    </a>
   </div>
 </body>
 </html>
